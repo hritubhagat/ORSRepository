@@ -37,11 +37,11 @@
 				</tr>
 				<tr>
 					<td>First Name:</td>
-					<td><input type="text" name="fname" required></td>
+					<td><input type="text" name="firstName" required></td>
 				</tr>
 				<tr>
 					<td>Last Name:</td>
-					<td><input type="text" name="lname" required></td>
+					<td><input type="text" name="lastName" required></td>
 				</tr>
 				<tr>
 					<td>Age:</td>

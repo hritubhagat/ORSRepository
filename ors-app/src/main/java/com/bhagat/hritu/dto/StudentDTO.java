@@ -1,9 +1,18 @@
 package com.bhagat.hritu.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-public class StudentDTO {
+@Entity // This tells Hibernate to make a table out of this class
+@Table(name="STUDENT") 
+public class StudentDTO extends BaseDTO{
 
-    private String name;
+    /**
+	 * Serial version ID
+	 */
+	private static final long serialVersionUID = 9061706301745147133L;
+	
+	private String name;
     private String rollNo;
     private int age;
     private String branch;

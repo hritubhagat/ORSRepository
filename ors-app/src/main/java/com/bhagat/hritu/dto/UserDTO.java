@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
 @Entity // This tells Hibernate to make a table out of this class
-@Table(name="user")
+@Table(name="USER") 
 public class UserDTO extends BaseDTO{
     /**
      * Serial Version UID
@@ -18,7 +18,7 @@ public class UserDTO extends BaseDTO{
     
     private static final String ACTIVE="active";
     private static final String INACTIVE="inactive";
-    
+
     @Column(name="username")
     @NotBlank
     private String userName;
@@ -34,7 +34,7 @@ public class UserDTO extends BaseDTO{
     private int unsuccessfulLogin;
     private String gender;
     private Timestamp lastLogin;
-    private String lock= INACTIVE;
+    private String accountLock= INACTIVE;
     private String registeredIP;
     private String lastLoginIP;
     
@@ -42,13 +42,7 @@ public class UserDTO extends BaseDTO{
     private String email;
     private String address;
     private Integer age;
-    
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
+
     public String getUserName() {
         return userName;
     }
@@ -127,11 +121,11 @@ public class UserDTO extends BaseDTO{
     public void setLastLogin(Timestamp lastLogin) {
         this.lastLogin = lastLogin;
     }
-    public String getLock() {
-        return lock;
+    public String getAccountLock() {
+        return accountLock;
     }
-    public void setLock(String lock) {
-        this.lock = lock;
+    public void setAccountLock(String accountLock) {
+        this.accountLock = accountLock;
     }
     public String getRegisteredIP() {
         return registeredIP;

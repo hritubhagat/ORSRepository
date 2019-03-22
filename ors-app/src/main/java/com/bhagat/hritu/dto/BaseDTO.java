@@ -4,15 +4,24 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
 
 /**
  * This class is the parent class of all the DTOs in the application. It contains generic attributes.
  * @author sappraja
  * @version 1.0
  */
+
+@Entity
+@Table(name="BASE")
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS) //slightly more normalized
 public abstract class BaseDTO implements Serializable{
     
     /**
@@ -23,8 +32,9 @@ public abstract class BaseDTO implements Serializable{
     /**
      * Non Business primary key
      */
+    
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="id")
     protected Long id; 
     
