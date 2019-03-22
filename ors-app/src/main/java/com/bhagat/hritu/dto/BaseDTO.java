@@ -97,7 +97,4 @@ public abstract class BaseDTO implements Serializable{
     public void setModifiedDatetime(Timestamp modifiedDatetime) {
         this.modifiedDatetime = modifiedDatetime;
     }
-    
-    
-    
 }
